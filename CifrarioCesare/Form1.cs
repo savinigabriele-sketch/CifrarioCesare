@@ -16,5 +16,13 @@ namespace CifrarioCesare
         {
             InitializeComponent();
         }
+
+        private void btn_cifra_Click(object sender, EventArgs e)
+        {
+            if (txt_1 = "" || txt_2 = "")
+            {
+                MessageBox.Show("Non è stato inserito alcun testo");
+            }
+        }
     }
 }
