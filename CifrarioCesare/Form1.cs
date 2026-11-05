@@ -19,10 +19,62 @@ namespace CifrarioCesare
 
         private void btn_cifra_Click(object sender, EventArgs e)
         {
-            if (txt_1 = "" || txt_2 = "")
+            string testo = txt_testo1.Text.ToUpper();
+            string risultato = "";
+            int chiave = int.Parse(txt_chiave1.Text);
+
+            foreach (char carattere in testo)
             {
-                MessageBox.Show("Non è stato inserito alcun testo");
+                if (carattere >= 'A' && carattere <= 'Z')
+                {
+                    int posizione = carattere - 'A';
+
+                    int nuovaPosizione = (posizione + chiave) % 26;
+
+                    char nuovaLettera = (char)('A' + nuovaPosizione);
+
+                    risultato += nuovaLettera;
+                }
+                    
+                else
+                    {
+                        risultato += carattere;
+                    }
+
             }
+
+            lbl_risultato1.Text = "Risultato: " + risultato;
+
+        }
+
+        private void btn_decifra_Click(object sender, EventArgs e)
+        {
+            string testo = txt_testo2.Text;
+            string risultato = "";
+            int chiave = int.Parse(txt_chiave2.Text);
+
+            foreach (char carattere in testo)
+            {
+                if (carattere >= 'A' && carattere <= 'Z')
+                {
+                    int posizione = carattere - 'A';
+
+                    int nuovaPosizione = (posizione - chiave) % 26;
+
+                    char nuovaLettera = (char)('A' + nuovaPosizione);
+
+                    risultato += nuovaLettera;
+                }
+
+                else
+                {
+                    risultato += carattere;
+                }
+
+            }
+
+            lbl_risultato2.Text = "Risultato: " + risultato;
+
         }
     }
 }

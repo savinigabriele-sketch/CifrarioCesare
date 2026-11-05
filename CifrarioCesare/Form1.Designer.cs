@@ -31,19 +31,17 @@
             this.lbl_titolo = new System.Windows.Forms.Label();
             this.lbl_1 = new System.Windows.Forms.Label();
             this.lbl_2 = new System.Windows.Forms.Label();
-            this.txt_2 = new System.Windows.Forms.TextBox();
-            this.txt_1 = new System.Windows.Forms.TextBox();
+            this.txt_testo2 = new System.Windows.Forms.TextBox();
+            this.txt_testo1 = new System.Windows.Forms.TextBox();
             this.btn_cifra = new System.Windows.Forms.Button();
             this.btn_decifra = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lbl_risultato = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_chiave1 = new System.Windows.Forms.TextBox();
+            this.txt_chiave2 = new System.Windows.Forms.TextBox();
+            this.lbl_risultato1 = new System.Windows.Forms.Label();
+            this.lbl_risultato2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_titolo
@@ -76,24 +74,24 @@
             this.lbl_2.TabIndex = 2;
             this.lbl_2.Text = "Inserisci il testo da decifrare:";
             // 
-            // txt_2
+            // txt_testo2
             // 
-            this.txt_2.Location = new System.Drawing.Point(608, 134);
-            this.txt_2.Name = "txt_2";
-            this.txt_2.Size = new System.Drawing.Size(130, 20);
-            this.txt_2.TabIndex = 3;
+            this.txt_testo2.Location = new System.Drawing.Point(608, 134);
+            this.txt_testo2.Name = "txt_testo2";
+            this.txt_testo2.Size = new System.Drawing.Size(130, 20);
+            this.txt_testo2.TabIndex = 3;
             // 
-            // txt_1
+            // txt_testo1
             // 
-            this.txt_1.Location = new System.Drawing.Point(189, 135);
-            this.txt_1.Name = "txt_1";
-            this.txt_1.Size = new System.Drawing.Size(119, 20);
-            this.txt_1.TabIndex = 4;
+            this.txt_testo1.Location = new System.Drawing.Point(189, 135);
+            this.txt_testo1.Name = "txt_testo1";
+            this.txt_testo1.Size = new System.Drawing.Size(119, 20);
+            this.txt_testo1.TabIndex = 4;
             // 
             // btn_cifra
             // 
             this.btn_cifra.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cifra.Location = new System.Drawing.Point(70, 344);
+            this.btn_cifra.Location = new System.Drawing.Point(69, 282);
             this.btn_cifra.Name = "btn_cifra";
             this.btn_cifra.Size = new System.Drawing.Size(189, 63);
             this.btn_cifra.TabIndex = 5;
@@ -104,12 +102,13 @@
             // btn_decifra
             // 
             this.btn_decifra.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btn_decifra.Location = new System.Drawing.Point(508, 344);
+            this.btn_decifra.Location = new System.Drawing.Point(484, 282);
             this.btn_decifra.Name = "btn_decifra";
             this.btn_decifra.Size = new System.Drawing.Size(213, 63);
             this.btn_decifra.TabIndex = 6;
             this.btn_decifra.Text = "DECIFRA";
             this.btn_decifra.UseVisualStyleBackColor = true;
+            this.btn_decifra.Click += new System.EventHandler(this.btn_decifra_Click);
             // 
             // label1
             // 
@@ -135,76 +134,60 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(414, 212);
+            this.label3.Location = new System.Drawing.Point(414, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "Inserisci la chiave:";
             // 
-            // textBox1
+            // txt_chiave1
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 213);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
+            this.txt_chiave1.Location = new System.Drawing.Point(141, 213);
+            this.txt_chiave1.Name = "txt_chiave1";
+            this.txt_chiave1.Size = new System.Drawing.Size(100, 20);
+            this.txt_chiave1.TabIndex = 10;
             // 
-            // textBox2
+            // txt_chiave2
             // 
-            this.textBox2.Location = new System.Drawing.Point(543, 212);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.txt_chiave2.Location = new System.Drawing.Point(561, 213);
+            this.txt_chiave2.Name = "txt_chiave2";
+            this.txt_chiave2.Size = new System.Drawing.Size(100, 20);
+            this.txt_chiave2.TabIndex = 11;
             // 
-            // lbl_risultato
+            // lbl_risultato1
             // 
-            this.lbl_risultato.AutoSize = true;
-            this.lbl_risultato.Location = new System.Drawing.Point(64, 296);
-            this.lbl_risultato.Name = "lbl_risultato";
-            this.lbl_risultato.Size = new System.Drawing.Size(71, 13);
-            this.lbl_risultato.TabIndex = 12;
-            this.lbl_risultato.Text = "RISULTATO:";
+            this.lbl_risultato1.AutoSize = true;
+            this.lbl_risultato1.Location = new System.Drawing.Point(66, 394);
+            this.lbl_risultato1.Name = "lbl_risultato1";
+            this.lbl_risultato1.Size = new System.Drawing.Size(71, 13);
+            this.lbl_risultato1.TabIndex = 12;
+            this.lbl_risultato1.Text = "RISULTATO:";
             // 
-            // label4
+            // lbl_risultato2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(466, 300);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "RISULTATO:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(141, 293);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 14;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(543, 297);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 15;
+            this.lbl_risultato2.AutoSize = true;
+            this.lbl_risultato2.Location = new System.Drawing.Point(481, 394);
+            this.lbl_risultato2.Name = "lbl_risultato2";
+            this.lbl_risultato2.Size = new System.Drawing.Size(71, 13);
+            this.lbl_risultato2.TabIndex = 13;
+            this.lbl_risultato2.Text = "RISULTATO:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 467);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lbl_risultato);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lbl_risultato2);
+            this.Controls.Add(this.lbl_risultato1);
+            this.Controls.Add(this.txt_chiave2);
+            this.Controls.Add(this.txt_chiave1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_decifra);
             this.Controls.Add(this.btn_cifra);
-            this.Controls.Add(this.txt_1);
-            this.Controls.Add(this.txt_2);
+            this.Controls.Add(this.txt_testo1);
+            this.Controls.Add(this.txt_testo2);
             this.Controls.Add(this.lbl_2);
             this.Controls.Add(this.lbl_1);
             this.Controls.Add(this.lbl_titolo);
@@ -219,19 +202,17 @@
         private System.Windows.Forms.Label lbl_titolo;
         private System.Windows.Forms.Label lbl_1;
         private System.Windows.Forms.Label lbl_2;
-        private System.Windows.Forms.TextBox txt_2;
-        private System.Windows.Forms.TextBox txt_1;
+        private System.Windows.Forms.TextBox txt_testo2;
+        private System.Windows.Forms.TextBox txt_testo1;
         private System.Windows.Forms.Button btn_cifra;
         private System.Windows.Forms.Button btn_decifra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lbl_risultato;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_chiave1;
+        private System.Windows.Forms.TextBox txt_chiave2;
+        private System.Windows.Forms.Label lbl_risultato1;
+        private System.Windows.Forms.Label lbl_risultato2;
     }
 }
 
