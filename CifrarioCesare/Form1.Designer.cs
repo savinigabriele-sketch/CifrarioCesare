@@ -42,13 +42,20 @@
             this.txt_chiave2 = new System.Windows.Forms.TextBox();
             this.lbl_risultato1 = new System.Windows.Forms.Label();
             this.lbl_risultato2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_titolo
             // 
             this.lbl_titolo.AutoSize = true;
             this.lbl_titolo.Font = new System.Drawing.Font("Nachlieli CLM", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lbl_titolo.Location = new System.Drawing.Point(231, 26);
+            this.lbl_titolo.Location = new System.Drawing.Point(434, 9);
             this.lbl_titolo.Name = "lbl_titolo";
             this.lbl_titolo.Size = new System.Drawing.Size(277, 30);
             this.lbl_titolo.TabIndex = 0;
@@ -102,7 +109,7 @@
             // btn_decifra
             // 
             this.btn_decifra.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btn_decifra.Location = new System.Drawing.Point(484, 282);
+            this.btn_decifra.Location = new System.Drawing.Point(465, 282);
             this.btn_decifra.Name = "btn_decifra";
             this.btn_decifra.Size = new System.Drawing.Size(213, 63);
             this.btn_decifra.TabIndex = 6;
@@ -172,11 +179,84 @@
             this.lbl_risultato2.TabIndex = 13;
             this.lbl_risultato2.Text = "RISULTATO:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(871, 368);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "RISULTATO:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(804, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 17);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Chiave: 3";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(762, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 380);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.button1.Location = new System.Drawing.Point(783, 282);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 63);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "DECIFRA";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(998, 134);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(130, 20);
+            this.textBox2.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(804, 131);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(188, 17);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Inserisci il testo da decifrare:";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1017, 282);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(189, 63);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "CIFRA";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 467);
+            this.ClientSize = new System.Drawing.Size(1231, 484);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.lbl_risultato2);
             this.Controls.Add(this.lbl_risultato1);
             this.Controls.Add(this.txt_chiave2);
@@ -213,6 +293,13 @@
         private System.Windows.Forms.TextBox txt_chiave2;
         private System.Windows.Forms.Label lbl_risultato1;
         private System.Windows.Forms.Label lbl_risultato2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
     }
 }
 
